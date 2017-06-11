@@ -1,10 +1,12 @@
-swift NSPredicate builder 
+NSPredicate builder for swift
+=====
 
-* Require
+# Require
 
+- swift 3.0 +
 - xcode 8.2 +
 
-* Example
+# Example
 
 ```swift
 func testEqInt() {
@@ -48,4 +50,7 @@ func testAnd() {
 
 ```
 
+# Install
+
+working.
 

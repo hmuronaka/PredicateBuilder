@@ -12,7 +12,6 @@
 		D6317AE21EED68A4002565A7 /* PredicateBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = D6317AD41EED68A4002565A7 /* PredicateBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6317AED1EED6961002565A7 /* PredicateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6317AEC1EED6961002565A7 /* PredicateBuilder.swift */; };
 		D6317AEF1EED6AD7002565A7 /* String+PredicateBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6317AEE1EED6AD7002565A7 /* String+PredicateBuilder.swift */; };
-		D6317AF11EED70E4002565A7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D6317AF01EED70E4002565A7 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,7 +215,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6317AF11EED70E4002565A7 /* README.md in Sources */,
 				D6317AEF1EED6AD7002565A7 /* String+PredicateBuilder.swift in Sources */,
 				D6317AED1EED6961002565A7 /* PredicateBuilder.swift in Sources */,
 			);
@@ -428,6 +426,7 @@
 				D6317AE71EED68A4002565A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6317AE81EED68A4002565A7 /* Build configuration list for PBXNativeTarget "PredicateBuilderTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +435,7 @@
 				D6317AEA1EED68A4002565A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

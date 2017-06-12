@@ -54,3 +54,5 @@ func testAnd() {
 
 working.
 
+# LICENSE
+The MIT license

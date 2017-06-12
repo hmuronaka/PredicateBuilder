@@ -165,6 +165,19 @@ class PredicateBuilderTest: XCTestCase {
         XCTAssertEqual(predicate, "a".pred == 1 && "b".pred != val)
     }
     
+    func testOr() {
+        let val = "str"
+        let predicate = NSPredicate(format: "a == 1 OR b != %@", val)
+        XCTAssertEqual(predicate, "a".pred == 1 || "b".pred != val)
+    }
+    
+    func testAndOr() {
+        let val = "str"
+        let predicate = NSPredicate(format: "a == 1 AND b != %@ OR c == 123", val)
+        XCTAssertEqual(predicate, "a".pred == 1 && "b".pred != val || "c".pred == 123)
+    }
+    
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

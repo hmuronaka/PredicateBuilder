@@ -186,6 +186,19 @@ public func &&(lhs: NSPredicate, rhs:[NSPredicate]) -> NSPredicate {
     return predicate
 }
 
+public func ||(lhs: NSPredicate, rhs: NSPredicate) -> NSPredicate {
+    return NSCompoundPredicate(orPredicateWithSubpredicates: [lhs, rhs])
+}
+
+public func ||(lhs: NSPredicate, rhs:[NSPredicate]) -> NSPredicate {
+    var array = [lhs]
+    array.append(contentsOf: rhs)
+    let predicate = NSCompoundPredicate(orPredicateWithSubpredicates: array)
+    return predicate
+}
+
+
+
 public prefix func !(predicate: NSPredicate) -> NSPredicate {
     return NSCompoundPredicate(notPredicateWithSubpredicate: predicate)
 }

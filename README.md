@@ -50,6 +50,16 @@ func testAnd() {
 
 ```
 
+More examples are [PredicateBuilderTests.swift](PredicateBuilderTests/PredicateBuilderTests.swift).
+
+
+# Screenshots
+
+![sample1.gif](screenshots/sample1.gif)
+
+![sample2.gif](screenshots/sample2.gif)
+
+
 # Install
 
 * Carthage

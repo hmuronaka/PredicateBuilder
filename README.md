@@ -52,7 +52,10 @@ func testAnd() {
 
 # Install
 
-working.
+* Carthage
 
+```ruby
+github "hmuronaka/PredicateBuilder"
+```
 # LICENSE
 The MIT license

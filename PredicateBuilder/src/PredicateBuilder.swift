@@ -147,13 +147,18 @@ public class PredicateBuilder {
         return aggirigateVariable(valName: "max", type: type)
     }
     
-    public func count(_ type: NSNumberType) -> PredicateBuilder {
+    public func count(_ type: NSNumberType = .intValue) -> PredicateBuilder {
         return aggirigateVariable(valName: "count", type: type)
     }
     
     
     private func aggirigateVariable(valName: String, type: NSNumberType) -> PredicateBuilder {
-        return PredicateBuilder(src: "\(src).@\(valName).\(type)")
+        switch type {
+        case .intValue:
+            return PredicateBuilder(src: "\(src).@\(valName)")
+        default:
+            return PredicateBuilder(src: "\(src).@\(valName).\(type)")
+        }
     }
     
      
@@ -170,6 +175,20 @@ public class PredicateBuilder {
     
     public static func some(_ src: String) -> PredicateBuilder {
         return PredicateBuilder(src: src, aggrigate: "SOME")
+    }
+    
+    public static func subquery(collection: String, variable: String, subquery predicate: NSPredicate) -> PredicateBuilder {
+        let src = buildSubquery(collection:collection, variable:variable, subquery:predicate)
+        return PredicateBuilder(src: "\(src)")
+    }
+    
+    public static func subquery(collection: String, variable: String, subquery closure: () -> NSPredicate) -> PredicateBuilder {
+        return subquery(collection:collection, variable:variable, subquery:closure())
+    }
+    
+    fileprivate static func buildSubquery(collection: String, variable: String, subquery predicate: NSPredicate ) -> NSExpression {
+        let edited = variable.hasPrefix("$") ? variable.substring(from: variable.index(variable.startIndex, offsetBy:1)) : variable
+        return NSExpression(forSubquery: NSExpression(forKeyPath:collection), usingIteratorVariable: edited, predicate: predicate)
     }
 }
 

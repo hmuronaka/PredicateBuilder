@@ -177,6 +177,13 @@ class PredicateBuilderTest: XCTestCase {
         XCTAssertEqual(predicate, "a".pred == 1 && "b".pred != val || "c".pred == 123)
     }
     
+    func testSubquery() {
+        let now = Date() as NSDate
+        let predicate = NSPredicate(format: "SUBQUERY(tasks, $task, $task.copletionDate == %@ AND $task.user == %@).@count > 0", now, "alex")
+        XCTAssertEqual(predicate,
+                       pred.subquery(collection: "tasks", variable: "$task") { "$task.completionDate".pred.eq(now) && "$task.user".pred.eq("alex") }.count() > 0)
+    }
+    
     
     func testPerformanceExample() {
         // This is an example of a performance test case.

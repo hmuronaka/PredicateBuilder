@@ -63,10 +63,7 @@ More examples are [PredicateBuilderTests.swift](PredicateBuilderTests/PredicateB
 
 # Install
 
-* Carthage
+* SwiftPM
 
-```ruby
-github "hmuronaka/PredicateBuilder"
-```
 # LICENSE
 The MIT license

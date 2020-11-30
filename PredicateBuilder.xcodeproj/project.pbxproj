@@ -34,6 +34,7 @@
 		D6317AEC1EED6961002565A7 /* PredicateBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PredicateBuilder.swift; path = src/PredicateBuilder.swift; sourceTree = "<group>"; };
 		D6317AEE1EED6AD7002565A7 /* String+PredicateBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+PredicateBuilder.swift"; path = "src/String+PredicateBuilder.swift"; sourceTree = "<group>"; };
 		D6317AF01EED70E4002565A7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F491F4AE2574B35400AB3D6B /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		D6317AC71EED68A4002565A7 = {
 			isa = PBXGroup;
 			children = (
+				F491F4AE2574B35400AB3D6B /* Package.swift */,
 				D6317AF01EED70E4002565A7 /* README.md */,
 				D6317AD31EED68A4002565A7 /* PredicateBuilder */,
 				D6317ADE1EED68A4002565A7 /* PredicateBuilderTests */,

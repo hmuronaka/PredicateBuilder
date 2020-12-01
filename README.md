@@ -3,9 +3,9 @@ NSPredicate builder for swift
 
 # Require
 
-- swift 3.0 +
-- xcode 8.2 +
-- iOS 9.0 +
+- swift 5.0 +
+- xcode 12.0 +
+- iOS 10.3 +
 
 # Example
 
